@@ -1,0 +1,16 @@
+name: kmod-example
+summary: Simple example snap showing how to provide kernel modules with a snap
+description: |
+  FIXME
+version: 1
+grade: stable
+confinement: devmode
+
+apps:
+  build:
+    command: bin/build-kmods.sh
+
+parts:
+  common:
+    plugin: dump
+    source: .
